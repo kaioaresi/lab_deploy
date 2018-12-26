@@ -2,8 +2,6 @@ version: '3.6'
 services:
   lab_deploy:
     image: kaioaresi/lab_deploy:qa
-    env_file:
-     - .env
     environment:
       - "TEMPO=${TEMPO}"
       - "WSO2_APIMANAGER_URL=${WSO2_APIMANAGER_URL}"
@@ -11,6 +9,9 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
+        placement:
+          constraints:
+            - node.role == manager
         delay: 5s
         max_attempts: 3
         window: 120s
@@ -21,4 +22,4 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: 4M
+          memory: 4MiB
