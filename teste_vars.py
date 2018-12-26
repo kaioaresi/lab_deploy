@@ -7,7 +7,7 @@ tempo = getenv('TEMPO')
 
 if wso2 != None and get_token != None and tempo != None:
     while True:
-        print(f'A url do wso2 é : {wso2}\nO token está sendo gerado pela url {get_token}')
+        print(f'A url do wso2 é : {wso2}\nO token está sendo gerado. pela url {get_token}')
         sleep(tempo)
 else:
     print('Os valores não informados!')
