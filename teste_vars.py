@@ -3,7 +3,7 @@ from time import sleep
 
 wso2 = getenv('WSO2_APIMANAGER_URL')
 get_token = getenv('AUTHENTICATION_CONFIG_LOGIN_URL')
-tempo = int(getenv('TEMPO'))
+tempo = getenv('TEMPO')
 
 if wso2 != None and get_token != None and tempo != None:
     while True:
