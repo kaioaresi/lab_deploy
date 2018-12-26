@@ -3,7 +3,6 @@ services:
   lab_deploy:
     image: kaioaresi/lab_deploy:qa
     environment:
-      - "TEMPO=${TEMPO}"
       - "WSO2_APIMANAGER_URL=${WSO2_APIMANAGER_URL}"
       - "AUTHENTICATION_CONFIG_LOGIN_URL=${AUTHENTICATION_CONFIG_LOGIN_URL}"
     deploy:
