@@ -2,6 +2,8 @@ version: '3.6'
 services:
   lab_deploy:
     image: kaioaresi/lab_deploy:qa
+    env_file:
+     - .env
     environment:
       - "TEMPO=${TEMPO}"
       - "WSO2_APIMANAGER_URL=${WSO2_APIMANAGER_URL}"
