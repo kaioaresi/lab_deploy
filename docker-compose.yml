@@ -9,9 +9,6 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
-        placement:
-          constraints:
-            - node.role == manager
         delay: 5s
         max_attempts: 3
         window: 120s
@@ -23,3 +20,6 @@ services:
         limits:
           cpus: '0.1'
           memory: 4MiB
+      placement:
+        constraints:
+          - node.role == manager
