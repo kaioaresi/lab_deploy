@@ -1,4 +1,5 @@
 from os import getenv
+from time import sleep
 
 wso2 = getenv('WSO2_APIMANAGER_URL')
 get_token = getenv('AUTHENTICATION_CONFIG_LOGIN_URL')
