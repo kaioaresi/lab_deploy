@@ -7,6 +7,7 @@ services:
     environment:
       - "WSO2_APIMANAGER_URL=${WSO2_APIMANAGER_URL}"
       - "AUTHENTICATION_CONFIG_LOGIN_URL=${AUTHENTICATION_CONFIG_LOGIN_URL}"
+      - "TESTE=${TESTE}"
     deploy:
       restart_policy:
         condition: on-failure
