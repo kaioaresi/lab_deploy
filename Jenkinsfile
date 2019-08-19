@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Env') {
       steps {
-        waitUntil() {
-          input(message: 'Digite o env', id: 'ID', ok: 'confirma', submitter: 'submitter', submitterParameter: 'submitterParameter')
-        }
-
+        input(message: 'Mensagem teste', id: 'TESTE', ok: 'OK', submitter: 'teste', submitterParameter: 'subpara')
       }
     }
   }
